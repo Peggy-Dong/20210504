@@ -19,7 +19,7 @@ from mysite.views import index
 from mysite.views import show
 
 urlpatterns = [
-	path('show<int:id>/', show),
+	path('show/<int:id>/', show),
     path('admin/', admin.site.urls),
     path('', index),
 ]
