@@ -22,4 +22,6 @@ urlpatterns = [
 	path('show<int:id>/', show),
     path('admin/', admin.site.urls),
     path('', index),
+
+
 ]

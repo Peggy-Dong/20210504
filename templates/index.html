@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 {% block title %}首頁{% endblock %}
-{% block headmessage %} <h1>wellcome to peggy'home</h1> {% endblock %}
+
+{% block headmessage %} 
+  <div style="text-align:center;"><h1>Raccoon-peggy's home</h1> 
+
+  </div>
+
+{% endblock %}
+
 {% block content %}
-<h3>above is lotto nombers</h3>
-<table class='table table-triped'>
-    <tr><td>special number:{{ special_number }}</td>
-        <td colspan=5>super pridict</td></tr>
-    <tr>
-      {% for no in lotto_numbers %}
-      <td>
-        {{ no }}
-      </td>
-      {% endfor %}
-    </tr>
-</table>
+<br>
+<h4>wellcome to here,this is my homework which python</h4>
+<br>
 <table class='table table-triped'>
   <td>Number</td><td>Title</td><td>Date</td>
 {% for post in posts %}
@@ -21,7 +19,7 @@
     <td>{{ post.id }}</td>
     <td><a href="/show{{post.id}}/">{{ post.title }}</a></td>
     <td> {{ post.pub_date}}</td>
-      <br/>
+      
   </tr>
 
 {% endfor %}
