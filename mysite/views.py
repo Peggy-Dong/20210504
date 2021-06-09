@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import random
 from mysite.models import Post
+from django.contrib import auth
 
 def index(request):
 	posts= Post.objects.all()
@@ -19,3 +20,7 @@ def show(request, id):
 	except:
 		return redirect("/")
 	return render(request, "showpost.html", locals())
+
+def logout(request):
+	auth.logout(request)
+	return redirect("/")
