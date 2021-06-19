@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}好食譜分享{% endblock %}
+{% block headmessage %} <h1>好食譜分享</h1> {% endblock %}
+{% block content %}
+
+<table class='table table-striped table-bordered'>
+	<tr><td>食譜</td><td>食材</td><td>g</td></tr>
+{% for 食譜 in 食材 %}
+	<tr>
+		<td>{{ 食譜.name }}</td>
+		<td>{{ 食譜.食材 }}</td>
+		<td>{{ 食譜.g }}</td>
+	</tr>
+
+{% endfor %}
+
+{{target.body}}
+
+
+</table>
+
+{% endblock %}

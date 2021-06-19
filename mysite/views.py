@@ -2,7 +2,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
-from mysite.models import Post
+from mysite.models import Post, 食譜, 食材
 from django.contrib import auth
 
 def index(request):
@@ -24,3 +24,7 @@ def show(request, id):
 def logout(request):
 	auth.logout(request)
 	return redirect("/")
+
+def rank(request):
+	食材 = 食譜.objects.all()
+	return render(request, "rank.html", locals())
